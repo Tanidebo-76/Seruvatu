@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C2 German Coach</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>C2 German Coach</h1>
+        <p>Upload your PDF textbook and practice writing, grammar, and vocabulary.</p>
+      </header>
+
+      <section class="card">
+        <h2>1. Upload your PDF textbook</h2>
+        <form id="upload-form">
+          <input type="file" id="pdf" accept="application/pdf" />
+          <button type="submit">Upload</button>
+        </form>
+        <div id="upload-status" class="status"></div>
+      </section>
+
+      <section class="card">
+        <h2>2. Ask for feedback</h2>
+        <div class="row">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="writing">Writing feedback</option>
+            <option value="grammar">Grammar drill</option>
+            <option value="vocabulary">Vocabulary trainer</option>
+          </select>
+        </div>
+        <textarea id="question" rows="8" placeholder="Write a paragraph, a question, or ask for a grammar drill."></textarea>
+        <button id="ask-button">Get feedback</button>
+        <div id="answer" class="answer"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
